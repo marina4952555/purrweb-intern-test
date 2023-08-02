@@ -1,0 +1,56 @@
+*, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.slider {
+  max-width: 1440px;
+  margin: 20px auto;
+}
+
+.slider__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.slider__list {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  height: 500px;
+  width: 500px;
+}
+
+.slider__item{
+  position: absolute;
+}
+
+.dots__list {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dots__item {
+  border: 1px solid rgb(209, 209, 209);
+  cursor: pointer;
+}
+
+.dots__item--active {
+  border: 1px solid rgb(28, 12, 121);
+}

@@ -1,0 +1,9 @@
+.nav {
+  &__list {
+    display: grid;
+    gap: 18px;
+  }
+  &__link {
+    font-size: 20px;
+  }
+}

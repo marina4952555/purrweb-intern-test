@@ -1,0 +1,118 @@
+.cookies {
+  position: fixed;
+  right: 20px;
+  left: 20px;
+  animation: cookiesOpenMobile 0.8s forwards;
+  
+  &__container {
+    border-radius: 16px;
+    background-color: #fff;
+    color: #383838;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px 28px;
+    gap: 40px;
+  }
+
+  &__button-closed {
+    position: absolute;
+    top: 17px;
+    right: 24px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  &__button-accept {
+    @extend %violet-button;
+    color: #fff;
+  }
+
+  &__button-decline {
+    @extend %button;
+    border: $violet 2px solid;
+  }
+
+  &__button-box {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  &--closed {
+    animation: cookiesClosedMobile 0.8s forwards;
+  }
+}
+
+@keyframes cookiesOpenMobile {
+  from {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+  to {
+    bottom: 40px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookiesOpenDesctop {
+  from {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+  to {
+    bottom: 30px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cookiesClosedMobile {
+  from {
+    bottom: 40px;
+    transform: translateY(0);
+  }
+  to {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+}
+
+@keyframes cookiesClosedDesctop {
+  from {
+    bottom: 30px;
+    transform: translateY(0);
+  }
+  to {
+    bottom: 0;
+    transform: translateY(100%);
+  }
+}
+
+@media (min-width: 1200px) {
+  .cookies {
+    right: 65px;
+    left: 90px;
+    animation: cookiesOpenDesctop 0.7s forwards;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 59px 28px 30px;
+    }
+
+    &__button-box {
+      flex-direction: row;
+    }
+
+    &__text {
+      margin-bottom: 0;
+      max-width: 790px;
+    }
+
+    &--closed {
+      animation: cookiesClosedDesctop 0.8s forwards;
+    }
+  }
+}

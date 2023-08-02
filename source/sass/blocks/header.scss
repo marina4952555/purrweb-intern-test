@@ -1,0 +1,111 @@
+.header {
+  &__top {
+    display: flex;
+    background-color: $orange;
+  }
+
+  &__button-tab {
+    padding: 10px 40px;
+    border-radius: 20px 20px 0 0;
+
+    &--business {
+      background-color: $dark-background;
+    }
+    
+    &--customers {
+      color: #000;
+    }
+    
+  }
+
+  &__bottom {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+  
+  &__bottom-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__logo {
+    display: flex;
+    gap: 7px;
+  }
+  
+  &__logo-text {
+    font-weight: 600;
+    font-size: 29px;
+  }
+
+  &__button-contact,
+  &__menu {
+    display: none;
+  }
+  
+  &__menu-open {
+    padding: 1px 4px;
+  }
+  
+  &__menu--open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 196px 16px 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 1;
+  }
+
+  &__menu-closed {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 178px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .header {
+    &__top {
+      padding-left: 61px;
+    }
+
+    &__bottom-box {
+      align-items: center;
+    }
+
+    &__bottom {
+      margin: 7px auto 0;
+      max-width: 1360px;  
+    }
+
+    &__logo {
+      margin-left: 7px;
+
+      & svg {
+        width: 35px;
+        height: 40px;
+      }
+    }
+
+    &__logo-text {
+      font-size: 36px;
+    }
+
+    &__menu-open {
+      display: none;
+    }
+
+    &__button-contact {
+      display: block;
+    }
+  }
+}

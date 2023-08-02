@@ -1,0 +1,40 @@
+$dark-background: #181818;
+$light-background: #F5F5F5;
+$text-color: #ffffff;
+$red-color: #EC1211;
+$violet: #954CED;
+$gray_1: #A7A7A7;
+$gray_2: #CFCFCF;
+$gray_3: #B9B9B9;
+$orange: #FFAA4C;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+$max-width: 1440px;
+
+%violet-button {
+  background-color: $violet;
+  border: 1px solid $violet;
+  @extend %button;
+}
+
+%grey-button {
+  background-color: $gray_1;
+  border: 1px solid $gray_1;
+  @extend %button;
+}
+
+%button {
+  padding: 16px 29px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+button, a {
+  transition: 0.3s;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}

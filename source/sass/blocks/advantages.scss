@@ -1,0 +1,110 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+
+  &__item {
+    padding: 19px;
+    color: #000;
+    background-color: $light-background;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+
+    &--1 {
+      padding-bottom: 197px;
+      background-image: url('../img/advantages_bg_img_1_mobile.png');
+      background-position: bottom left;
+    }
+
+    &--2 {
+      padding-bottom: 129px;
+      background-image: url('../img/advantages_bg_img_2_mobile.png');
+      background-position: bottom right;
+    }
+
+    &--3 {
+      padding: 19px 20px 113px 21px;
+      background-image: url('../img/advantages_bg_img_3_mobile.png');
+      background-position: bottom right;
+    }
+
+    &--4 {
+      padding: 19px 43px 190px 21px;
+      background-image: url('../img/advantages_bg_img_4_mobile.png');
+      background-position: 145px bottom;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin-top: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__item {
+      &--1, &--4 {
+        max-width: 56%;
+      }
+
+      &--2, &--3 {
+        max-width: 42%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages {
+    &__item {
+      border-radius: 30px;
+
+      &--1 {
+        padding: 41px 39px 10px 330px;
+        background-image: url('../img/advantages_bg_img_1_desctop.png');
+        background-position: bottom left;
+      }
+  
+      &--2 {
+        padding: 41px 78px 85px 40px;
+        background-image: url('../img/advantages_bg_img_2_desctop.png');
+        background-position: bottom right;
+      }
+  
+      &--3 {
+        padding: 41px 59px 52px 40px;
+        & .advantages__text {
+          padding-right: 135px;
+        }
+      }
+  
+      &--4 {
+        padding: 41px 283px 20px 35px;
+        background-image: url('../img/advantages_bg_img_4_desctop.png');
+        background-position: 462px bottom;
+      }
+    }
+
+    &__title {
+      font-size: 48px;
+      line-height: 59px;
+    }
+  
+    &__text {
+      margin-top: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}
